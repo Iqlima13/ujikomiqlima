@@ -80,7 +80,6 @@ public void tampilWaktu() {
         txtjam = new javax.swing.JTextField();
         btnpelanggan = new javax.swing.JButton();
         btnproduk = new javax.swing.JButton();
-        btnpenjualan = new javax.swing.JButton();
         btnregistrasi = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -98,6 +97,7 @@ public void tampilWaktu() {
         btnbatal = new javax.swing.JButton();
         btnlogin = new javax.swing.JButton();
         lbuser = new javax.swing.JLabel();
+        btnpenjualan = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         beranda = new javax.swing.JMenu();
         register = new javax.swing.JMenuItem();
@@ -109,11 +109,18 @@ public void tampilWaktu() {
         transaksi = new javax.swing.JMenu();
         penjualan = new javax.swing.JMenuItem();
         laporan = new javax.swing.JMenu();
+        rkplap = new javax.swing.JMenuItem();
         tentang = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu Utama\n");
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 204));
+
+        txttgl.setEnabled(false);
+
+        txtjam.setEnabled(false);
 
         btnpelanggan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/penjualann.png"))); // NOI18N
         btnpelanggan.addActionListener(new java.awt.event.ActionListener() {
@@ -126,13 +133,6 @@ public void tampilWaktu() {
         btnproduk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnprodukActionPerformed(evt);
-            }
-        });
-
-        btnpenjualan.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\AplikasiKasir_Ujikom\\pelanggann.png")); // NOI18N
-        btnpenjualan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnpenjualanActionPerformed(evt);
             }
         });
 
@@ -155,6 +155,7 @@ public void tampilWaktu() {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Penjualan");
 
+        FormLogin.setTitle("Form Login\n");
         FormLogin.setVisible(true);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon kasir.png"))); // NOI18N
@@ -254,6 +255,13 @@ public void tampilWaktu() {
         lbuser.setForeground(new java.awt.Color(255, 255, 255));
         lbuser.setText("Silahkan Lodin Dulu!");
 
+        btnpenjualan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pelanggann.png"))); // NOI18N
+        btnpenjualan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnpenjualanActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -268,22 +276,13 @@ public void tampilWaktu() {
                         .addComponent(FormLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(316, Short.MAX_VALUE)
+                .addContainerGap(274, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(txttgl, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(txtjam, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnregistrasi)
-                        .addGap(167, 167, 167)
-                        .addComponent(btnpelanggan)
-                        .addGap(151, 151, 151)
-                        .addComponent(btnproduk)
-                        .addGap(130, 130, 130)
-                        .addComponent(btnpenjualan)
-                        .addGap(252, 252, 252))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(226, 226, 226)
@@ -292,7 +291,16 @@ public void tampilWaktu() {
                         .addComponent(jLabel3)
                         .addGap(196, 196, 196)
                         .addComponent(jLabel4)
-                        .addGap(274, 274, 274))))
+                        .addGap(274, 274, 274))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnregistrasi)
+                        .addGap(167, 167, 167)
+                        .addComponent(btnpelanggan)
+                        .addGap(151, 151, 151)
+                        .addComponent(btnproduk)
+                        .addGap(122, 122, 122)
+                        .addComponent(btnpenjualan)
+                        .addGap(257, 257, 257))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,23 +312,23 @@ public void tampilWaktu() {
                 .addGap(26, 26, 26)
                 .addComponent(lbuser)
                 .addGap(135, 135, 135)
-                .addComponent(FormLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(FormLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(85, 85, 85)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnpelanggan)
                             .addComponent(btnregistrasi)
-                            .addComponent(btnproduk, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4))
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)))
+                            .addComponent(btnproduk, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(btnpenjualan))
-                .addGap(46, 133, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel4))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addGap(46, 112, Short.MAX_VALUE))
         );
 
         beranda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/home.png"))); // NOI18N
@@ -378,6 +386,7 @@ public void tampilWaktu() {
 
         jMenuBar1.add(master);
 
+        transaksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-transaction-20.png"))); // NOI18N
         transaksi.setText("Transaksi");
 
         penjualan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/data penjualan.png"))); // NOI18N
@@ -393,10 +402,30 @@ public void tampilWaktu() {
 
         laporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/laporan.png"))); // NOI18N
         laporan.setText("Laporan");
+
+        rkplap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/laporan.png"))); // NOI18N
+        rkplap.setText("Rekap Laporan");
+        rkplap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rkplapActionPerformed(evt);
+            }
+        });
+        laporan.add(rkplap);
+
         jMenuBar1.add(laporan);
 
         tentang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/tentang.png"))); // NOI18N
-        tentang.setText("Tentang");
+        tentang.setText("Help");
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/tentang.png"))); // NOI18N
+        jMenuItem1.setText("Tentang");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        tentang.add(jMenuItem1);
+
         jMenuBar1.add(tentang);
 
         setJMenuBar(jMenuBar1);
@@ -405,11 +434,17 @@ public void tampilWaktu() {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
         );
 
         pack();
@@ -423,10 +458,6 @@ new FormRegister().setVisible(true);           // TODO add your handling code he
     private void btnprodukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnprodukActionPerformed
 new FormProduk().setVisible(true);           // TODO add your handling code here:
     }//GEN-LAST:event_btnprodukActionPerformed
-
-    private void btnpenjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpenjualanActionPerformed
-new FormPenjualan().setVisible(true);           // TODO add your handling code here:
-    }//GEN-LAST:event_btnpenjualanActionPerformed
 
     private void txtpwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpwActionPerformed
         // TODO add your handling code here:
@@ -492,7 +523,7 @@ try {
         laporan.setEnabled(true);
         txttgl.setEnabled(true);
         txtjam.setEnabled(true);
-        FormLogin.setVisible(true);
+        FormLogin.setVisible(false);
         btnregistrasi.setEnabled(false);
         btnpelanggan.setEnabled(true);
         btnproduk.setEnabled(true);
@@ -517,6 +548,18 @@ try {
     private void btnbatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbatalActionPerformed
 new MenuUtama().setVisible(true);           // TODO add your handling code here:
     }//GEN-LAST:event_btnbatalActionPerformed
+
+    private void rkplapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rkplapActionPerformed
+new FormLaporanTransaksi().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rkplapActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+new FormAbout().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void btnpenjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpenjualanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnpenjualanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -573,6 +616,7 @@ new MenuUtama().setVisible(true);           // TODO add your handling code here:
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu laporan;
     private javax.swing.JLabel lbuser;
@@ -583,6 +627,7 @@ new MenuUtama().setVisible(true);           // TODO add your handling code here:
     private javax.swing.JMenuItem penjualan;
     private javax.swing.JMenuItem produk;
     private javax.swing.JMenuItem register;
+    private javax.swing.JMenuItem rkplap;
     private javax.swing.JMenu tentang;
     private javax.swing.JMenu transaksi;
     private javax.swing.JTextField txtjam;

@@ -216,6 +216,7 @@ String harga, idproduk, idprodukpenjualan, iddetail, jam, tanggal, sub_total;
         txttgl = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Form Penjualan\n");
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 204));
 
@@ -296,6 +297,8 @@ String harga, idproduk, idprodukpenjualan, iddetail, jam, tanggal, sub_total;
 
         jLabel5.setText("ID Penjualan");
 
+        txtidpenjualan.setEnabled(false);
+
         jLabel6.setText("Data Transaksi");
 
         tblpenjualan.setModel(new javax.swing.table.DefaultTableModel(
@@ -360,6 +363,10 @@ String harga, idproduk, idprodukpenjualan, iddetail, jam, tanggal, sub_total;
                 btnkeluarActionPerformed(evt);
             }
         });
+
+        txtjam.setEnabled(false);
+
+        txttgl.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -89,6 +89,7 @@ ResultSet rst;
         tblproduk = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Form Produk");
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 204));
 

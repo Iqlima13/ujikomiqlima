@@ -92,6 +92,7 @@ ResultSet rst;
         tblpelanggan = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Form Pelanggan\n");
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 204));
 
